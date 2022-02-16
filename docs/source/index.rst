@@ -12,10 +12,3 @@ Cisco SecureX Integration Workflows
    :caption: threat response
 
    threatresponse/index
-
-.. toctree::
-   :maxdepth: 2
-   :numbered:
-   :caption: Orchestration
-
-   orchestration/index
