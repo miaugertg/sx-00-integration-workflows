@@ -94,7 +94,7 @@ There are twenty-two scopes available when adding a new client. A single scope c
 +--------------------------------+--------------------------------------------------------------------+
 | SSE                            | SSE Integration. Manage your Devices.                              |
 +--------------------------------+--------------------------------------------------------------------+
-| Telemetry:write                | collect application data for analytics (Write Only)                |
+| Telemetry:write                | Collect application data for analytics (Write Only)                |
 +--------------------------------+--------------------------------------------------------------------+
 | Users                          | Manage users of your organisation                                  |
 +--------------------------------+--------------------------------------------------------------------+
