@@ -102,7 +102,7 @@ There are twenty-two scopes available when adding a new client. A single scope c
 +--------------------------------+--------------------------------------------------------------------+
 
 
-The scopes can be selected when creating API Clients at https://visibility.amp.cisco.com/settings/apiClients
+The scopes can be selected when creating API Clients at https://securex.us.security.cisco.com/settings/apiClients
 
 .. warning::
 
