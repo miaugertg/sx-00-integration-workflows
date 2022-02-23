@@ -125,8 +125,8 @@ use of an ``Access Token``. You can request a token from the `OAuth2 Token Api <
     Accept: application/json
 
     {
-        "client_id": "client-38bbc74d-f7d1-452b-8777-fb8c7d985475",
-        "client_password": "FIz1FDf40ms0mNpc9oS8AJQJ2Vyw0aUtE17XWZWEQ71IMs13J8AQFD",
+        "client_id": "client-d71e4914-e0ed-4673-8879-5c4a44f5e3dd",
+        "client_password": "iUfoUoaigCQ7Pc7ibjD4XUdBIL-Be1uSgxxXVMg1CiYSX9Gtj8DVow",
         "grant_type": "client_credentials"
     }
 
@@ -134,8 +134,8 @@ Example using Bash with a curl command:
 
 .. code-block:: bash
 
-    client_id="client-38bbc74d-f7d1-452b-8777-fb8c7d985475"
-    client_password="FIz1FDf40ms0mNpc9oS8AJQJ2Vyw0aUtE17XWZWEQ71IMs13J8AQFD"
+    client_id: "client-d71e4914-e0ed-4673-8879-5c4a44f5e3dd"
+    client_password: "iUfoUoaigCQ7Pc7ibjD4XUdBIL-Be1uSgxxXVMg1CiYSX9Gtj8DVow"
         curl -X POST \
          -u "$client_id:$client_password" \
          --header 'Content-Type: application/x-www-form-urlencoded' \
@@ -151,7 +151,7 @@ JSON Response:
       "access_token":"eyJhbGciO...",
       "token_type":"bearer",
       "expires_in":600,
-      "scope":"enrich:read casebook inspect:read"
+      "scope":"enrich:read casebook inspect:read private-intel"
     }
 
 Description of Response:
