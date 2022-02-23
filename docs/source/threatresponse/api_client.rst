@@ -36,7 +36,7 @@ will be used to retrieve an access token in the next step.
 Generate new API Client Prompt
 
 .. image:: _static/generate-new-api-client.png
-    :target: _static/generate-new-api-client.png
+    :target: _images/generate-new-api-client.png
     :width: 560px
     :align: center
     :height: 658px
@@ -44,7 +44,7 @@ Generate new API Client Prompt
 New API Client
 
 .. image:: _static/new-api-client-generated.png
-    :target: _static/new-api-client-generated.png
+    :target: _images/new-api-client-generated.png
     :width: 560px
     :align: center
     :height: 340px
@@ -188,7 +188,7 @@ When you make a request, the X-Ratelimit-Org-Limit header will tell you the rate
 
 More information and examples of rate limits can be found at: https://visibility.amp.cisco.com/help/integration
 
-API Endpoints
+APIs
 -------------
 There are six available APIs used for integrations. These include:
 
