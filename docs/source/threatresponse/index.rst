@@ -2,7 +2,7 @@
    :maxdepth: 2
    :caption: Getting Started
 
-   Getting Started <api_intro/index>
+   Getting Started <api_client>
 
 .. toctree::
    :maxdepth: 2

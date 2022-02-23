@@ -17,9 +17,13 @@ the user with the name of the region. Then save it and use the appropriate URLs 
 
 The current available regional API endpoints are:
 
--  https://visibility.amp.cisco.com - North America
--  https://visibility.eu.amp.cisco.com - Europe
--  https://visibility.apjc.amp.cisco.com - Asia
++--------------------------------+--------------------------------------------------------------------+
+| Asia                           | https://visibility.apjc.amp.cisco.com                              |
++--------------------------------+--------------------------------------------------------------------+
+| Europe                         | https://visibility.eu.amp.cisco.com                                |
++--------------------------------+--------------------------------------------------------------------+
+| North America                  | https://visibility.amp.cisco.com                                   |
++--------------------------------+--------------------------------------------------------------------+
 
 
 Create API Client in Threat Response UI
