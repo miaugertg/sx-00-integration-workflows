@@ -53,20 +53,38 @@ New API Client
 Scopes
 ------
 
-There are twelve scopes available when adding a new client. A single scope can be selected or any mix of the scopes can be chosen.
+There are twenty-two scopes available when adding a new client. A single scope can be selected or any mix of the scopes can be chosen.
 
++--------------------------------+--------------------------------------------------------------------+
+| Admin                          | Provide admin privileges                                           |
++--------------------------------+--------------------------------------------------------------------+
+| Asset                          | Access and modify your assets                                      |
 +--------------------------------+--------------------------------------------------------------------+
 | Casebook                       | Access and modify your casebooks                                   |
 +--------------------------------+--------------------------------------------------------------------+
-| Enrich                         | Query your configured modules for threat intelligence (Read Only)  |
+| Enrich:read                    | Query your configured modules for threat intelligence (Read Only)  |
 +--------------------------------+--------------------------------------------------------------------+
-| Global Intelligence            | Access AMP Global Intelligence (Read Only)                         |
+| Event:read                     | Read IROH Events (Read Only)                                       |
 +--------------------------------+--------------------------------------------------------------------+
-| Inspect                        | Extract observables and data from text (Read Only)                 |
+| Feedback                       | Submit Customer Feedback                                           |
 +--------------------------------+--------------------------------------------------------------------+
-| Integration                    | Manage your modules (Read Only)                                    |
+| Global Intel:read              | Access AMP Global Intelligence (Read Only)                         |
 +--------------------------------+--------------------------------------------------------------------+
-| Private Intelligence           | Access AMP Private Intelligence                                    |
+| Inspect:read                   | Extract Observables and data from text                             |
++--------------------------------+--------------------------------------------------------------------+
+| Integration                    | Manage your modules                                                |
++--------------------------------+--------------------------------------------------------------------+
+| Investigation                  | Perform threat analysis investigation                              |
++--------------------------------+--------------------------------------------------------------------+
+| Invite                         | Invite users into your organization                                |
++--------------------------------+--------------------------------------------------------------------+
+| Notification                   | Receive notifications from integrations                            |
++--------------------------------+--------------------------------------------------------------------+
+| Oauth                          | Manage OAuth2 Clients                                              |
++--------------------------------+--------------------------------------------------------------------+
+| Orbital                        | Orbital Integration.                                               |
++--------------------------------+--------------------------------------------------------------------+
+| Private Intel                  | Access Private Intelligence                                        |
 +--------------------------------+--------------------------------------------------------------------+
 | Profile                        | Get your profile information                                       |
 +--------------------------------+--------------------------------------------------------------------+
@@ -74,14 +92,15 @@ There are twelve scopes available when adding a new client. A single scope can b
 +--------------------------------+--------------------------------------------------------------------+
 | Response                       | List and execute response actions using configured modules         |
 +--------------------------------+--------------------------------------------------------------------+
-| SSE                            | SSE Integration. Manage your Devices (Read Only)                   |
+| SSE                            | SSE Integration. Manage your Devices.                              |
 +--------------------------------+--------------------------------------------------------------------+
-| Telemetry                      | Collect application data for analytics (Write Only)                |
+| Telemetry:write                | collect application data for analytics (Write Only)                |
 +--------------------------------+--------------------------------------------------------------------+
-| Ui Settings                    | Save user settings                                                 |
+| Users                          | Manage users of your organisation                                  |
 +--------------------------------+--------------------------------------------------------------------+
-| Users                          | Manage users of your organization                                  |
+| Webhook                        | Manage your Webhooks                                               |
 +--------------------------------+--------------------------------------------------------------------+
+
 
 The scopes can be selected when creating API Clients at https://visibility.amp.cisco.com/settings/apiClients
 
