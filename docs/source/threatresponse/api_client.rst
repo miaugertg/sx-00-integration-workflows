@@ -25,6 +25,7 @@ The current available regional API endpoints are:
 | North America                  | https://visibility.amp.cisco.com                                   |
 +--------------------------------+--------------------------------------------------------------------+
 
+All examples in this documentation will use the North America region.
 
 Create API Client in Threat Response UI
 ---------------------------------------
@@ -32,12 +33,22 @@ Create API Client in Threat Response UI
 When creating your API client, you will receive a ``Client ID`` and ``Client Password`` which
 will be used to retrieve an access token in the next step.
 
+Generate new API Client Prompt
 
-.. image:: _static/ctg-api-creds.png
-    :target: _static/ctg-api-creds.html
-    :width: 400px
+.. image:: _static/generate-new-api-client.png
+    :target: _static/generate-new-api-client.png
+    :width: 560px
     :align: center
-    :height: 300px
+    :height: 658px
+
+New API Client
+
+.. image:: _static/new-api-client-generated.png
+    :target: _static/new-api-client-generated.png
+    :width: 560px
+    :align: center
+    :height: 340px
+
 
 Scopes
 ------
