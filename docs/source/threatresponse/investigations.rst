@@ -17,7 +17,7 @@ Create a URL using the following format:
 
 .. code::
 
-    https://visibility.amp.cisco.com/#/investigate?q=<STRING>
+    https://visibility.amp.cisco.com/investigate?q=<STRING>
 
 .. note::
 
