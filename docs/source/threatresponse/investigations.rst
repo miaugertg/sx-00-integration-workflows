@@ -34,12 +34,17 @@ Launch Investigation From a Newly Created Casebook
 
 Interacting with Casebooks is done via the ``private-intel`` URL for the selected region. For North America it is at https://private.intel.amp.cisco.com
 
-.. note::
+.. note:: 
 
-    Creating a casebook requires an API client with the ``casebook`` or ``private-intel`` scope
+    The complete Casebook API documentation can referenced at https://private.intel.amp.cisco.com/index.html#/Casebook
+
 
 Create a new casebook
 ^^^^^^^^^^^^^^^^^^^^^
+
+.. note::
+
+    Creating a casebook requires an API client with the ``casebook`` or ``private-intel`` scope
 
 Use the following to create a new casebook:
 
@@ -69,10 +74,6 @@ Example casebook JSON payload:
 
 New Casebook API Example
 ^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code::
-
-    https://private.intel.amp.cisco.com/index.html#!/Casebook/post_ctia_casebook
 
 JSON Response:
 
