@@ -70,7 +70,7 @@ Example casebook JSON payload:
       "title": "Casebook July 26, 2018 11:14 AM",
       "tlp": "amber",
       "timestamp": "2018-07-26T16:14:40.000Z"
-  }
+    }
 
 New Casebook API Example
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -80,6 +80,22 @@ New Casebook API Example
     POST https://private.intel.amp.cisco.com/ctia/casebook HTTP/1.1
     Authorization: Bearer ${jwt}
     Content-Type: application/json
+
+    {
+      "description": "Created via the API",
+      "schema_version": "1.0.9",
+      "observables": [
+        {
+          "value": "cisco.com",
+          "type": "domain"
+        }
+      ],
+      "type": "casebook",
+      "short_description": "API Case",
+      "title": "Casebook July 26, 2018 11:14 AM",
+      "tlp": "amber",
+      "timestamp": "2018-07-26T16:14:40.000Z"
+  }
 
 JSON Response:
 
