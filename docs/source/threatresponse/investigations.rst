@@ -32,7 +32,11 @@ Use Cases
 Launch Investigation From a Newly Created Casebook
 --------------------------------------------------
 
-Interacting with Casebooks is done via the public-intel URL for the selected region. For North America it is at https://private.intel.amp.cisco.com
+Interacting with Casebooks is done via the ``private-intel`` URL for the selected region. For North America it is at https://private.intel.amp.cisco.com
+
+.. note::
+
+    Creating a casebook requires an API client with the ``casebook`` or ``private-intel`` scope
 
 Create a new casebook
 ^^^^^^^^^^^^^^^^^^^^^
@@ -75,28 +79,25 @@ JSON Response:
 .. code-block:: JSON
 
     {
-   "description":"This is an example",
-   "schema_version":"1.0.16",
-   "observables":[
-      {
-         "value":"125.65.112.23",
-         "type":"ip"
-      },
-      {
-         "value":"4a54655a83b1d539c9d5b65c25d20580",
-         "type":"md5"
-      }
-   ],
-   "type":"casebook",
-   "short_description":"Investigating a bad thing",
-   "title":"My New Example Casebook",
-   "id":"https://private.intel.amp.cisco.com:443/ctia/casebook/casebook-8b0794e2-bb9b-4ca7-b17d-93a7caa7370f",
-   "tlp":"amber",
-   "groups":[
-      "threatgrid:364755"
-   ],
-   "timestamp":"2020-04-27T20:48:52.698Z",
-   "owner":"jwick"
+      "description": "Created via the API",
+      "schema_version": "1.1.3",
+      "observables": [
+        {
+          "value": "cisco.com",
+          "type": "domain"
+        }
+      ],
+      "type": "casebook",
+      "short_description": "API Case",
+      "title": "Casebook July 26, 2018 11:14 AM",
+      "id": "https://private.intel.amp.cisco.com:443/ctia/casebook/casebook-25d3dd3e-661b-4b37-8588-f12685e296aa",
+      "tlp": "amber",
+      "client_id": "client-d71e4914-e0ed-4673-8879-5c4a44f5e3dd",
+      "groups": [
+        "f1631ad1-316b-438c-a055-631a63f8b6f6"
+      ],
+      "timestamp": "2018-07-26T16:14:40.000Z",
+      "owner": "e173c521-5c58-4f90-a850-3097a89cf6b8"
     }
 
 Save the ``.id`` in the response from the POST.
@@ -114,9 +115,17 @@ Generate the URL to link to the case using the following format:
 
 .. code::
 
-    https://visibility.amp.cisco.com/#/investigate?spid=<CASEBOOK_ID_UUID>
+    https://visibility.amp.cisco.com/investigate?spid=<CASEBOOK_ID_UUID>
 
-Only the UUID portion ``25d3dd3e-661b-4b37-8588-f12685e296aa`` is required to open a casebook.
+Only the UUID portion ``25d3dd3e-661b-4b37-8588-f12685e296aa`` is required to open a casebook for investigation. This
+
+.. code::
+
+    from os.path import basename
+    from urllib.parse import urlparse
+
+    def uuid_from_url(casebook_id_url):
+        return basename(urlparse(casebook_id_url).path)
 
 .. note::
 
@@ -286,13 +295,13 @@ Generate a URL using the following format:
 
 .. code::
 
-    https://visibility.amp.cisco.com/#/investigate?spid=<CASEBOOK_ID_UUID>
+    https://visibility.amp.cisco.com/investigate?spid=<CASEBOOK_ID_UUID>
 
 Example fully populated URL:
 
 .. code::
 
-    https://visibility.amp.cisco.com/#/investigate?spid=25d3dd3e-661b-4b37-8588-f12685e296aa
+    https://visibility.amp.cisco.com/investigate?spid=25d3dd3e-661b-4b37-8588-f12685e296aa
 
 Only the UUID portion ``25d3dd3e-661b-4b37-8588-f12685e296aa`` is required to open a casebook.
 
