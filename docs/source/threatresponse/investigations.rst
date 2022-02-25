@@ -75,6 +75,12 @@ Example casebook JSON payload:
 New Casebook API Example
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. http:example::
+
+    POST https://private.intel.amp.cisco.com/ctia/casebook HTTP/1.1
+    Authorization: Bearer ${jwt}
+    Content-Type: application/json
+
 JSON Response:
 
 .. code-block:: JSON
@@ -118,7 +124,7 @@ Generate the URL to link to the case using the following format:
 
     https://visibility.amp.cisco.com/investigate?spid=<CASEBOOK_ID_UUID>
 
-Only the UUID portion ``25d3dd3e-661b-4b37-8588-f12685e296aa`` is required to open a casebook for investigation. This
+Only the UUID portion ``25d3dd3e-661b-4b37-8588-f12685e296aa`` is required to open a casebook for investigation. The following Python 3 example shows how to obtain the UUID from the URI based ``.id`` returned from the API
 
 .. code::
 
@@ -126,7 +132,7 @@ Only the UUID portion ``25d3dd3e-661b-4b37-8588-f12685e296aa`` is required to op
     from urllib.parse import urlparse
 
     def uuid_from_url(casebook_id_url):
-        return basename(urlparse(casebook_id_url).path)
+        return basename(urlparse(casebook_id_url).path).replace("casebook-", "")
 
 .. note::
 
@@ -234,7 +240,7 @@ JSON Response when <STRING> is "Second":
 
 .. note::
 
-    The query parameter will return hits for ``.description``, ``.external_references.description``, ``.observables[].value``, ``.short_description``, and ``.title``.
+    The query parameter will return hits for the following casebook values ``.description``, ``.external_references.description``, ``.observables[].value``, ``.short_description``, and ``.title``.
 
 Get Specific Casebook API Example
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
