@@ -124,6 +124,12 @@ Generate the URL to link to the case using the following format:
 
     https://visibility.amp.cisco.com/investigate?spid=<CASEBOOK_ID_UUID>
 
+Example fully populated URL:
+
+.. code::
+
+    https://visibility.amp.cisco.com/investigate?spid=25d3dd3e-661b-4b37-8588-f12685e296aa
+
 Only the UUID portion ``25d3dd3e-661b-4b37-8588-f12685e296aa`` is required to open a casebook for investigation. The following Python 3 example shows how to obtain the UUID from the URI based ``.id`` returned from the API
 
 .. code::
@@ -149,6 +155,10 @@ Launch Investigation From an Existing Casebook
 ----------------------------------------------
 
 Interacting with Casebooks is done via the public-intel URL for the selected region. For North America it is at https://private.intel.amp.cisco.com
+
+.. note:: 
+
+    The complete Casebook API documentation can referenced at https://private.intel.amp.cisco.com/index.html#/Casebook
 
 Search for existing casebooks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -310,7 +320,15 @@ Example fully populated URL:
 
     https://visibility.amp.cisco.com/investigate?spid=25d3dd3e-661b-4b37-8588-f12685e296aa
 
-Only the UUID portion ``25d3dd3e-661b-4b37-8588-f12685e296aa`` is required to open a casebook.
+Only the UUID portion ``25d3dd3e-661b-4b37-8588-f12685e296aa`` is required to open a casebook for investigation. The following Python 3 example shows how to obtain the UUID from the URI based ``.id`` returned from the API
+
+.. code::
+
+    from os.path import basename
+    from urllib.parse import urlparse
+
+    def uuid_from_url(casebook_id_url):
+        return basename(urlparse(casebook_id_url).path).replace("casebook-", "")
 
 Present a n number of ``.[].title`` links to the user.
 
